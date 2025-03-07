@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({path: "./photo-social-backend/src/.env"});
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");

@@ -1,9 +1,10 @@
 {
   "name": "photo-social-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "jest"
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "start": "cd src && nodemon server"
   },
   "keywords": [],
   "author": "",
@@ -22,3 +23,5 @@
     "supertest": "^7.0.0"
   }
 }
+
+

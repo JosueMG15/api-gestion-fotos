@@ -40,10 +40,12 @@ exports.deletePhoto = async (req, res) => {
       return res.status(404).json({ error: "Foto no encontrada" });
     }
     const isTestEnv = process.env.NODE_ENV === "test";
-    
+    console.log(photo.imageUrl);
     const filePath = (isTestEnv)
                 ? path.join(__dirname, "../../", photo.imageUrl)
-                : path.join(__dirname, "../", photo.imageUrl);
+                : path.join(__dirname, "../../../", photo.imageUrl);
+    
+    console.log(filePath);
                 
     fs.unlink(filePath, async (err) => {
       if (err) {
